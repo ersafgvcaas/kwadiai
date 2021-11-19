@@ -4,7 +4,7 @@ version: 2.1
 jobs:
   pull-and-build:
     machine:
-      - image: ubuntu-2004:202010-01
+      image: ubuntu-2004:202010-01
     resource_class: large
     steps:
       - checkout
@@ -21,4 +21,3 @@ workflows:
             branches:
               only:
                 - main
-    
