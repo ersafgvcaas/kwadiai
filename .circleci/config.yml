@@ -3,7 +3,7 @@ version: 2.1
 executors:
   linux:
     docker:
-      - image: arvindr226/alpine-ssh
+      - image: circleci/node:8.4.0
         auth:
           username: mydockerhub-user
           password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
