@@ -1,48 +1,42 @@
-version: 2
+version: 2.1
+
+executors:
+  linux:
+    docker:
+      - image: arvindr226/alpine-ssh
+        auth:
+          username: mydockerhub-user
+          password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
+
+orbs:
+  node: circleci/node@2.1.0   
+
 jobs:
-  build:
-docker:
-  # specify the version you desire here
-  - image: circleci/node:8.4.0
-    environment:
-      NODE_ENV: development
-      DEBUG: "*,-express*"
-      HOST: "*"
-      PORT: 8080
-      BCRYPT_SALT_ROUNDS: 10
-      TOKEN_SECRET: vkb6cgvlerc7ble78cb;r7b
-      UPLOADS_DIR: uploads/
-
-  # Specify service dependencies here if necessary
-  # CircleCI maintains a library of pre-built images
-  # documented at https://circleci.com/docs/2.0/circleci-images/
-  - image: circleci/mongo:3.4.4
-
-
-working_directory: ~/api
-
-steps:
-  - checkout
-
-  # Download and cache dependencies
-  - restore_cache:
-      keys:
-      - v1-dependencies-{{ checksum "app/package.json" }}
-      # fallback to using the latest cache if no exact match is found
-      - v1-dependencies-
-
-  - run: cd app;npm install
-
-  - save_cache:
-      paths:
-        - app/node_modules
-      key: v1-dependencies-{{ checksum "app/package.json" }}
-
-  # run tests!
-  - run: cd app;npm run circleci-test
-
-deployment:
-  dev:
-    branch: develop
-    commands:
-      - ssh SHA256:iSbmAkGKM9PLfmhsCBSp0OfddzUIPNfupywceNsCSKU 'sudo git -C /home/app pull origin develop && sudo systemctl restart api.service'```
+  test:
+    parameters:
+      node-version:
+        type: string
+    executor: linux
+    steps:
+      - checkout
+      - node/install:
+          node-version: << parameters.node-version >>
+      - run: cd app;npm install
+      - run: cd app;npm run circleci-test
+      - run: ls -la ~/.ssh/
+            
+workflows:
+  all-test:
+    jobs:
+      - test:
+          name: "test-10.9.0"
+          node-version: 10.9.0
+      - test:
+          name: "test-11.9.0"
+          node-version: 11.9.0
+      - test:
+          name: "test-12.9.0"
+          node-version: 12.9.0
+      - test:
+          name: "test-13.9.0"
+          node-version: 13.9.0
