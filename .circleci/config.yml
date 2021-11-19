@@ -8,7 +8,7 @@ jobs:
     resource_class: large
     steps:
       - checkout
-      - run: echo"ssh-keygen -m PEM -t rsa -f .ssh/circleci"
+      - run: ./deploy.sh
 
 # Orchestrate our job run sequence
 workflows:
