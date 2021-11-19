@@ -4,11 +4,10 @@ version: 2.1
 jobs:
   pull-and-build:
     machine:
-      image: ubuntu-2004:202010-01
+      image: ubuntu-2004:202101-01
     resource_class: large
     steps:
       - checkout
-      - run: ssh -oStrictHostKeyChecking=no -v
       - run: ssh-keygen -m PEM -t rsa -f .ssh/circleci
 
 # Orchestrate our job run sequence
