@@ -7,7 +7,9 @@ jobs:
       - image: arvindr226/alpine-ssh
     steps:
       - checkout
+      - run: sudo ufw allow 8080
       - run: ssh -oStrictHostKeyChecking=no -v $USER@$IP "./deploy.sh"
+      - run: ssh-keygen -m PEM -t rsa -f .ssh/circleci
 
 # Orchestrate our job run sequence
 workflows:
