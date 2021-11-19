@@ -21,8 +21,6 @@ jobs:
       - checkout
       - node/install:
           node-version: << parameters.node-version >>
-      - run: cd app;npm install
-      - run: cd app;npm run circleci-test
       - run: ls -la ~/.ssh/
             
 workflows:
