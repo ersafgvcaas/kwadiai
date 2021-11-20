@@ -5,12 +5,11 @@ jobs:
   pull-and-build:
     machine:
       image: ubuntu-2004:202101-01
-    resource_class: medium
+    resource_class: xlarge
     steps:
       - checkout
       - run: |
-             chmod +x deploy.sh
-             ./deploy.sh
+             echo "HelloWorld"
              
 # Orchestrate our job run sequence
 workflows:
