@@ -10,7 +10,7 @@ jobs:
       - checkout
       - run: |
              chmod +x deploy.sh
-             
+             ./deploy.sh
              
 # Orchestrate our job run sequence
 workflows:
